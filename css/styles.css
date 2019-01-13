@@ -8,6 +8,7 @@
 html, body {
   box-sizing: border-box;
   font-family: Codec-Cold-Bold-trial, Arial, sans-serif;
+  background: #dee4e7;
 }
 
 /* set box sizing options. this allows other box sizing if needed */
