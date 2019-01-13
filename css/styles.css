@@ -20,6 +20,9 @@ html, body {
 
 /* page_title styles */
 .page_title {
-  text-align: center;
   font-size: 48px;
+}
+
+.main {
+  text-align: center;
 }
