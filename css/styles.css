@@ -18,6 +18,16 @@ html, body {
   box-sizing: inherit;
 }
 
+/* set navbar styles */
+.navbar {
+  border-radius: 0;
+}
+
+/* styles for nav subject selector and home link */
+a.dropdown-toggle,
+a.home_link {
+  font-size: 18px;
+}
 /* page_title styles */
 .page_title {
   font-size: 48px;
