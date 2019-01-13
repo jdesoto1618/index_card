@@ -1,6 +1,13 @@
+/* global font Codec */
+@font-face {
+  font-family: "Codec-Cold-Bold-trial";
+  src: url("../css/fonts/Codec-Cold-Bold-trial.ttf");
+}
+
 /* global html, body styles */
 html, body {
   box-sizing: border-box;
+  font-family: Codec-Cold-Bold-trial, Arial, sans-serif;
 }
 
 /* set box sizing options. this allows other box sizing if needed */
@@ -8,4 +15,10 @@ html, body {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+/* page_title styles */
+.page_title {
+  text-align: center;
+  font-size: 48px;
 }
