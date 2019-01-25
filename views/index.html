@@ -38,17 +38,13 @@
             <span class="icon-bar"></span>
           </button>
           <ul class="nav navbar-nav">
-            <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li> -->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subject Areas<span class="caret"></span></a>
               <ul id="topics" class="dropdown-menu">
                 <li><a href="#">Web Development</a></li>
                 <li><a href="#">Water Distribution</a></li>
-                <li><a href="#">Water Treamtment</a></li>
+                <li><a href="#">Water Treatment</a></li>
                 <li><a href="#">Information Technology</a></li>
-                <!-- <li role="separator" class="divider"></li> -->
-                <!-- <li><a href="#">Separated link</a></li> -->
               </ul>
             </li>
           </ul>
@@ -66,7 +62,10 @@
     <div class="main">
       <!-- main page title -->
       <h1 id='page_title' class='page_title'>Index Card Questions!</h1>
-      <button class="btn btn-primary submit" type="button" name="button">Submit Answer</button>
+      <p id='question_field'></p>
+      <p id='answer_field'></p>
+      <button id='question_button' class="btn btn-primary submit" type="button" name="button">Random Question</button>
+      <button id='answer_button' class="btn btn-success submit" type="button" name="button">View Answer</button>
     </div> <!-- ends main div -->
     <!-- main js file script -->
     <script src="../js/main.js"></script>
@@ -74,9 +73,18 @@
 </html>
 
 <!-- TODO:
-    add js
-    add views?
+    change background to white, add rounded #eaeaea border around page content, including questions, answers, and add question/answer fields, but not around question hyperlinks
+    don't allow question and answer fields to push buttons around. set position to relative? button position to absolute?
     set styles
-    possibly move questions and objects to separate arrays
+    check font size for h1, question and answer fields
+    hide question/answer buttons until subject is chosen
+    create add question function, button
+    stretch goal: make questions unique, but also looping back to beginning
+    create links in footer to question numbers
+    set questions by chosen subject area
+    create show answer button, field in DOM
     customize navbar, check responsiveness
+    set margins on DOM, elements are crowded together currently
+    hide answer button until a question is chosen
+    remove borders on buttons
  -->
