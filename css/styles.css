@@ -23,17 +23,15 @@ html, body {
   border-radius: 0;
 }
 
-/* styles for nav subject selector and home link */
-a.dropdown-toggle {
-  font-size: 18px;
-}
-/* page_title styles */
-.page_title {
-  font-size: 48px;
-}
-
 .main {
   text-align: center;
+}
+
+/* styles for submit question/answer button */
+#submit_question {
+  background: #22b7ff;
+  border: 1px solid #22b7ff;
+  font-size: 20px;
 }
 
 /* styles for question input */
@@ -45,11 +43,162 @@ a.dropdown-toggle {
   border-radius: 10px;
   border: none;
   outline: none;
-  width: 25%;
   height: 32px;
 }
 
-/* styles for answer input field */
-#add_answer_field {
-  margin: 15px auto 10px auto;
+/* styles for question and answer generator buttons */
+#question_button {
+  height: 32px;
 }
+#answer_button {
+  height: 32px;
+}
+
+/* media queries for mobile, up to 599px */
+@media only screen and (min-width: 200px) and (max-width: 385px) {
+  /* page_title styles */
+  .page_title {
+    font-size: 28px;
+  }
+
+  /* styles for nav subject selector and home link */
+  a.dropdown-toggle {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  /* styles for submit question/answer button on mobile */
+  #submit_question {
+    width: 80%;
+  }
+
+  /* styles for question input on mobile */
+  #add_question_field,
+  #add_answer_field {
+    width: 80%;
+  }
+
+  /* styles for question and answer generator buttons on mobile */
+  #question_button {
+    width: 40%;
+    font-size: 11px;
+    height: 32px;
+  }
+  #answer_button {
+    width: 40%;
+    font-size: 11px;
+    height: 32px;
+  }
+} /* ends media query for very small mobile devices
+
+/* media queries for mobile, up to 599px */
+@media only screen and (min-width: 386px) and (max-width: 599px) {
+  /* page_title styles */
+  .page_title {
+    font-size: 32px;
+  }
+
+  /* styles for nav subject selector and home link */
+  a.dropdown-toggle {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  /* styles for submit question/answer button on mobile */
+  #submit_question {
+    width: 80%;
+  }
+
+  /* styles for question input on mobile */
+  #add_question_field,
+  #add_answer_field {
+    width: 80%;
+  }
+
+  /* styles for question and answer generator buttons on mobile */
+  #question_button {
+    width: 40%;
+    font-size: 14px;
+    height: 32px;
+  }
+  #answer_button {
+    width: 40%;
+    font-size: 13px;
+    height: 32px;
+  }
+} /* ends media queries for mobile */
+
+/* media queries for tablet sized mobile, 600px to 767px */
+@media only screen and (min-width: 600px) {
+  /* page_title styles */
+  .page_title {
+    font-size: 36px;
+  }
+
+  /* styles for nav subject selector and home link */
+  a.dropdown-toggle {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  /* styles for submit question/answer button */
+  #submit_question {
+    width: 70%;
+  }
+
+  /* styles for question input */
+  #add_question_field,
+  #add_answer_field {
+    width: 70%;
+  }
+
+  /* styles for question and answer generator buttons on mobile */
+  #question_button {
+    width: 40%;
+    height: 32px;
+  }
+  #answer_button {
+    width: 30%;
+    height: 32px;
+  }
+} /* ends media queires for tablets */
+
+/* media queries for desktops, anything 768px and larger */
+@media only screen and (min-width: 768px) {
+  /* styles for nav subject selector and home link */
+  a.dropdown-toggle {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+
+  /* page_title styles */
+  .page_title {
+    font-size: 48px;
+  }
+
+  /* styles for answer input field */
+  #add_answer_field {
+    margin: 15px auto 10px auto;
+  }
+
+  /* styles for submit question/answer button */
+  #submit_question {
+    width: 60%;
+  }
+
+  /* styles for question input */
+  #add_question_field,
+  #add_answer_field {
+    width: 60%;
+  }
+
+  /* styles for question and answer generator buttons on mobile */
+  #question_button {
+    width: 30%;
+    height: 32px;
+  }
+  #answer_button {
+    width: 30%;
+    height: 32px;
+  }
+} /* ends media queries for desktops */
