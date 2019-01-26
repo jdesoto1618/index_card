@@ -24,8 +24,7 @@ html, body {
 }
 
 /* styles for nav subject selector and home link */
-a.dropdown-toggle,
-a.home_link {
+a.dropdown-toggle {
   font-size: 18px;
 }
 /* page_title styles */
@@ -35,4 +34,22 @@ a.home_link {
 
 .main {
   text-align: center;
+}
+
+/* styles for question input */
+#add_question_field,
+#add_answer_field {
+  display: block;
+  margin: 30px auto 10px auto;
+  padding-left: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 25%;
+  height: 32px;
+}
+
+/* styles for answer input field */
+#add_answer_field {
+  margin: 15px auto 10px auto;
 }

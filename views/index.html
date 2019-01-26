@@ -53,8 +53,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a class="home_link" href="index.html">Home</a></li>
-          </ul>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+              <ul id="menu" class="dropdown-menu">
+                <li><a class="home_link" href="index.html">Start Over</a></li>
+                <li><a href="#">Add Question</a></li>
+              </ul>
+            </li>
+          </ul> <!-- ends navbar-right dropdown -->
         </div><!-- closes .navbar-collapse -->
       </div><!-- closes container div -->
     </nav> <!-- closes navbar -->
@@ -66,6 +72,9 @@
       <p id='answer_field'></p>
       <button id='question_button' class="btn btn-primary submit" type="button" name="button">Random Question</button>
       <button id='answer_button' class="btn btn-success submit" type="button" name="button">View Answer</button>
+      <input id="add_question_field" type="text" name="add_question" placeholder="Add a question here!">
+      <input id="add_answer_field" type="text" name="add_answer" placeholder="Add the answer here!">
+      <button id='submit_question' class='btn btn-success' type="button" name="button"></button>
     </div> <!-- ends main div -->
     <!-- main js file script -->
     <script src="../js/main.js"></script>
@@ -76,6 +85,8 @@
     change background to white, add rounded #eaeaea border around page content, including questions, answers, and add question/answer fields, but not around question hyperlinks
     don't allow question and answer fields to push buttons around. set position to relative? button position to absolute?
     set styles
+    set width of add question input field to 100% or nearly that, on mobile. use media query to change this for > 768 px to 40%;
+      also do this for the answer input field
     check font size for h1, question and answer fields
     hide question/answer buttons until subject is chosen
     create add question function, button
@@ -87,4 +98,6 @@
     set margins on DOM, elements are crowded together currently
     hide answer button until a question is chosen
     remove borders on buttons
+    may want to make a way to hide the add question buttons and fields once done
+    check for empty input fields before onclick event? ajax?
  -->
