@@ -2,10 +2,11 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- page tab title -->
-    <title>Index Cards</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- viewport meta tag for responsive development -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- page tab title -->
+    <title>Index Cards</title>
     <!-- bootstrap version 3.3.7 links, scripts -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,45 +26,48 @@
     <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
-    <!-- navbar navbar-default is standard, navbar-inverse swaps colors -->
+    <!-- navbar-inverse is "dark" themed -->
     <nav class="navbar navbar-inverse">
-      <!-- change container-fluid class to container so the navbar items have more left padding -->
-      <div class="container">
+      <!-- change container-fluid class to container for add more left padding -->
+      <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+          <!-- button will expand hamburger menu when clicked -->
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subject Areas<span class="caret"></span></a>
-              <ul id="topics" class="dropdown-menu">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">Water Distribution</a></li>
-                <li><a href="#">Water Treatment</a></li>
-                <li><a href="#">Information Technology</a></li>
-              </ul>
-            </li>
-          </ul>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <!-- subjects dropdown selector in nav -->
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subjects <span class="caret"></span></a>
+              <ul id="topics" class="dropdown-menu">
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Water Treatment</a></li>
+                <li><a href="#">Water Distribution</a></li>
+                <li><a href="#">Information Technology</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- menu dropdown selector in nav -->
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
               <ul id="menu" class="dropdown-menu">
-                <li><a class="home_link" href="index.html">Start Over</a></li>
+                <li><a href="index.html">Start Over</a></li>
                 <li><a href="#">Add Question</a></li>
               </ul>
             </li>
-          </ul> <!-- ends navbar-right dropdown -->
-        </div><!-- closes .navbar-collapse -->
-      </div><!-- closes container div -->
-    </nav> <!-- closes navbar -->
+          </ul> <!-- closes navbar-right -->
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> <!-- ends bootstrap nav -->
 
     <div class="main">
       <!-- main page title -->

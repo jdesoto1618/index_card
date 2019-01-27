@@ -55,7 +55,7 @@ var select = subjects.addEventListener('click', function(e) {
   function addVisibility() {
     add_quest.style.visibility = 'visible';
     add_quest_ans.style.visibility = 'visible';
-    sub_quest_button.innerHTML = 'Add Question to ' + '<br/> ' + topic;
+    sub_quest_button.innerHTML = 'Add Question to ' + topic;
     sub_quest_button.style.visibility = 'visible';
   } // ends addVisibility function
   // function to show input values from adding a question and answer

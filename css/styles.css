@@ -30,14 +30,26 @@ html, body {
 
 /* styles for qa fields div */
 .qa_fields {
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 
 /* set position for qa_buttons div */
 .qa_section {
   width: 100%;
-  position: absolute;
-  top: 230px;
+  /* position: absolute;
+  top: 230px; */
+}
+
+/* set styles for bootstrap buttons */
+.btn {
+  border-radius: 20px;
+  border: none;
+}
+
+/* remove default bootstrap border shadow effect */
+.btn-primary,
+.btn-success {
+  box-shadow: none;
 }
 
 /* styles for question/answer fields */
@@ -59,19 +71,22 @@ html, body {
   display: block;
   margin: 30px auto 10px auto;
   padding-left: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: none;
   outline: none;
   height: 32px;
 }
 
 /* styles for question and answer generator buttons */
-#question_button {
+#question_button,
+#answer_button {
   height: 32px;
 }
 
-#answer_button {
-  height: 32px;
+#question_button:focus,
+#answer_button:focus,
+#submit_question:focus {
+  outline: none;
 }
 
 /* media queries for very small mobile, up to 385px */
@@ -90,6 +105,7 @@ html, body {
   /* styles for submit question/answer button on mobile */
   #submit_question {
     width: 80%;
+    font-size: 16px;
   }
 
   /* styles for question input on mobile */
@@ -114,12 +130,17 @@ html, body {
   /* qa_fields styles on very small mobile */
   .qa_fields {
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 25px;
   }
 
   /* set button padding on mobile  */
   .submit {
     padding: 0;
+  }
+
+  /* remove the caret from the dropdown menus in navbar on very small devices */
+  .caret {
+    display: none;
   }
 } /* ends media query for very small mobile devices
 
@@ -170,10 +191,15 @@ html, body {
   .submit {
     padding: 0;
   }
+
+  /* remove the caret from the dropdown menus in navbar on mobile devices */
+  .caret {
+    display: none;
+  }
 } /* ends media queries for mobile */
 
 /* media queries for tablet sized mobile, 600px to 767px */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 767px){
   /* page_title styles */
   .page_title {
     font-size: 42px;
@@ -218,6 +244,11 @@ html, body {
   /* set button padding on mobile  */
   .submit {
     padding: 0;
+  }
+
+  /* remove the caret from the dropdown menus in navbar on tablets */
+  .caret {
+    display: none;
   }
 } /* ends media queires for tablets */
 
