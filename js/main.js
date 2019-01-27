@@ -75,7 +75,7 @@ var select = subjects.addEventListener('click', function(e) {
   // show the question and answer buttons now that something is selected in navbar
   quest_button.style.visibility = 'visible';
   // change the title of the page to include the selected topic
-  document.getElementById('page_title').innerHTML = topic + ' Questions';
+  document.getElementById('page_title').innerHTML = topic;
   if(topic === 'Water Treatment') {
     // event listener to get the clicked menu option for adding a question
     var menu = menus.addEventListener('click', function(e) {

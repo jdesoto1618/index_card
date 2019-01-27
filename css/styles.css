@@ -1,13 +1,13 @@
-/* global font Codec */
-@font-face {
+/* global font Codec. left this commented out for reference */
+/* @font-face {
   font-family: "Codec-Cold-Bold-trial";
   src: url("../css/fonts/Codec-Cold-Bold-trial.ttf");
-}
+} */
 
 /* global html, body styles */
 html, body {
   box-sizing: border-box;
-  font-family: Codec-Cold-Bold-trial, Arial, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background: #dee4e7;
 }
 
@@ -23,8 +23,27 @@ html, body {
   border-radius: 0;
 }
 
+/* center align text in main div */
 .main {
   text-align: center;
+}
+
+/* styles for qa fields div */
+.qa_fields {
+  margin-top: 30px;
+}
+
+/* set position for qa_buttons div */
+.qa_section {
+  width: 100%;
+  position: absolute;
+  top: 230px;
+}
+
+/* styles for question/answer fields */
+#question_field,
+#answer_field {
+  line-height: 1.6;
 }
 
 /* styles for submit question/answer button */
@@ -50,15 +69,16 @@ html, body {
 #question_button {
   height: 32px;
 }
+
 #answer_button {
   height: 32px;
 }
 
-/* media queries for mobile, up to 599px */
+/* media queries for very small mobile, up to 385px */
 @media only screen and (min-width: 200px) and (max-width: 385px) {
   /* page_title styles */
   .page_title {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   /* styles for nav subject selector and home link */
@@ -81,13 +101,25 @@ html, body {
   /* styles for question and answer generator buttons on mobile */
   #question_button {
     width: 40%;
-    font-size: 11px;
+    font-size: 13px;
     height: 32px;
   }
+
   #answer_button {
     width: 40%;
-    font-size: 11px;
+    font-size: 13px;
     height: 32px;
+  }
+
+  /* qa_fields styles on very small mobile */
+  .qa_fields {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  /* set button padding on mobile  */
+  .submit {
+    padding: 0;
   }
 } /* ends media query for very small mobile devices
 
@@ -95,7 +127,7 @@ html, body {
 @media only screen and (min-width: 386px) and (max-width: 599px) {
   /* page_title styles */
   .page_title {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   /* styles for nav subject selector and home link */
@@ -118,13 +150,25 @@ html, body {
   /* styles for question and answer generator buttons on mobile */
   #question_button {
     width: 40%;
-    font-size: 14px;
+    font-size: 16px;
     height: 32px;
   }
+
   #answer_button {
     width: 40%;
-    font-size: 13px;
+    font-size: 16px;
     height: 32px;
+  }
+
+  /* set font size on mobile */
+  .qa_fields {
+    font-size: 18px;
+    margin-top: 35px;
+  }
+
+  /* set button padding on mobile  */
+  .submit {
+    padding: 0;
   }
 } /* ends media queries for mobile */
 
@@ -132,34 +176,48 @@ html, body {
 @media only screen and (min-width: 600px) {
   /* page_title styles */
   .page_title {
-    font-size: 36px;
+    font-size: 42px;
   }
 
-  /* styles for nav subject selector and home link */
+  /* styles for nav subject selector and home link on tablets */
   a.dropdown-toggle {
     font-size: 18px;
     margin-left: 10px;
   }
 
-  /* styles for submit question/answer button */
+  /* styles for submit question/answer button on tablets */
   #submit_question {
     width: 70%;
   }
 
-  /* styles for question input */
+  /* styles for question input on tablets */
   #add_question_field,
   #add_answer_field {
     width: 70%;
   }
 
-  /* styles for question and answer generator buttons on mobile */
+  /* styles for question and answer generator buttons on tablets */
   #question_button {
     width: 40%;
     height: 32px;
+    font-size: 16px;
   }
+
   #answer_button {
     width: 30%;
     height: 32px;
+    font-size: 16px;
+  }
+
+  /* styles for qa fields div on tablets */
+  .qa_fields {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  /* set button padding on mobile  */
+  .submit {
+    padding: 0;
   }
 } /* ends media queires for tablets */
 
@@ -174,6 +232,16 @@ html, body {
   /* page_title styles */
   .page_title {
     font-size: 48px;
+  }
+
+  /* container div styles for navbar */
+  .container {
+    width: auto;
+  }
+
+  /* set font size for desktop  */
+  .main {
+    font-size: 16px;
   }
 
   /* styles for answer input field */
@@ -192,13 +260,25 @@ html, body {
     width: 60%;
   }
 
-  /* styles for question and answer generator buttons on mobile */
+  /* styles for question and answer generator buttons */
   #question_button {
     width: 30%;
     height: 32px;
   }
+
   #answer_button {
     width: 30%;
     height: 32px;
+  }
+
+  /* set font size on desktop */
+  .qa_fields {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+
+  /* set button padding on mobile  */
+  .submit {
+    padding: 0;
   }
 } /* ends media queries for desktops */
