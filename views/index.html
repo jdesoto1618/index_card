@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <!-- page tab title -->
     <title>Index Cards</title>
-
+    <!-- viewport meta tag for responsive development -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- bootstrap version 3.3.7 links, scripts -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -18,11 +19,10 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- end of bootstrap links and scripts -->
-
+    <!-- roboto condensed link -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <!-- link to css file -->
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- viewport meta tag for responsive development -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <!-- navbar navbar-default is standard, navbar-inverse swaps colors -->
@@ -68,13 +68,17 @@
     <div class="main">
       <!-- main page title -->
       <h1 id='page_title' class='page_title'>Index Card Questions!</h1>
-      <p id='question_field'></p>
-      <p id='answer_field'></p>
-      <button id='question_button' class="btn btn-primary submit" type="button" name="button">Random Question</button>
-      <button id='answer_button' class="btn btn-success submit" type="button" name="button">View Answer</button>
-      <input id="add_question_field" type="text" name="add_question" placeholder="Add a question here">
-      <input id="add_answer_field" type="text" name="add_answer" placeholder="Add the answer here">
-      <button id='submit_question' class='btn btn-success' type="button" name="button"></button>
+      <div class="qa_fields">
+        <p id='question_field'></p>
+        <p id='answer_field'></p>
+      </div> <!-- ends qa_fields div -->
+      <div class="qa_section">
+        <button id='question_button' class="btn btn-primary submit" type="button" name="button">Random Question</button>
+        <button id='answer_button' class="btn btn-success submit" type="button" name="button">View Answer</button>
+        <input id="add_question_field" type="text" name="add_question" placeholder="Add a question here">
+        <input id="add_answer_field" type="text" name="add_answer" placeholder="Add the answer here">
+        <button id='submit_question' class='btn btn-success' type="button" name="button"></button>
+      </div> <!-- ends qa_buttons div -->
     </div> <!-- ends main div -->
     <!-- main js file script -->
     <script src="../js/main.js"></script>
