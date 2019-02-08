@@ -1,4 +1,4 @@
-/* global font Codec. left this commented out for reference */
+/* global font Codec. left this here for reference */
 /* @font-face {
   font-family: "Codec-Cold-Bold-trial";
   src: url("../css/fonts/Codec-Cold-Bold-trial.ttf");
@@ -28,16 +28,9 @@ html, body {
   text-align: center;
 }
 
-/* styles for qa fields div */
-.qa_fields {
-  /* margin-top: 30px; */
-}
-
-/* set position for qa_buttons div */
+/* styles for qa_buttons div */
 .qa_section {
   width: 100%;
-  /* position: absolute;
-  top: 230px; */
 }
 
 /* set styles for bootstrap buttons */
@@ -77,16 +70,15 @@ html, body {
   height: 32px;
 }
 
-/* styles for question and answer generator buttons */
-#question_button,
-#answer_button {
-  height: 32px;
-}
-
 #question_button:focus,
 #answer_button:focus,
 #submit_question:focus {
   outline: none;
+}
+
+/* adjust padding on navbar dropdown menu for all screen sizes */
+.dropdown-menu {
+  padding: 0;
 }
 
 /* media queries for very small mobile, up to 385px */
@@ -96,34 +88,35 @@ html, body {
     font-size: 32px;
   }
 
-  /* styles for nav subject selector and home link */
+  /* styles for nav subject selector and home link on very small mobile */
   a.dropdown-toggle {
-    font-size: 14px;
-    margin-left: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid #337ab7;
   }
 
-  /* styles for submit question/answer button on mobile */
+  /* set font for dropdown menu items on tablets */
+  .dropdown-menu {
+    font-size: 14px;
+  }
+
+  /* styles for submit question/answer button on very small mobile */
   #submit_question {
     width: 80%;
-    font-size: 16px;
+    font-size: 14px;
   }
 
-  /* styles for question input on mobile */
+  /* styles for question input on very small mobile */
   #add_question_field,
   #add_answer_field {
     width: 80%;
   }
 
-  /* styles for question and answer generator buttons on mobile */
-  #question_button {
-    width: 40%;
-    font-size: 13px;
-    height: 32px;
-  }
-
+  /* styles for question and answer generator buttons on very small mobile */
+  #question_button,
   #answer_button {
     width: 40%;
-    font-size: 13px;
+    font-size: 12px;
     height: 32px;
   }
 
@@ -133,14 +126,19 @@ html, body {
     margin-top: 25px;
   }
 
-  /* set button padding on mobile  */
+  /* set button padding on very small mobile */
   .submit {
     padding: 0;
   }
 
-  /* remove the caret from the dropdown menus in navbar on very small devices */
+  /* remove the caret from the dropdown menus in navbar on very small mobile */
   .caret {
     display: none;
+  }
+
+  /* center text of navbar selections on very small mobile */
+  #bs-example-navbar-collapse-1 {
+    text-align: center;
   }
 } /* ends media query for very small mobile devices
 
@@ -151,10 +149,16 @@ html, body {
     font-size: 36px;
   }
 
-  /* styles for nav subject selector and home link */
+  /* styles for nav subject selector and home link on mobile */
   a.dropdown-toggle {
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid #337ab7;
+  }
+
+  /* set font for dropdown menu items on tablets */
+  .dropdown-menu {
     font-size: 16px;
-    margin-left: 10px;
   }
 
   /* styles for submit question/answer button on mobile */
@@ -169,12 +173,7 @@ html, body {
   }
 
   /* styles for question and answer generator buttons on mobile */
-  #question_button {
-    width: 40%;
-    font-size: 16px;
-    height: 32px;
-  }
-
+  #question_button,
   #answer_button {
     width: 40%;
     font-size: 16px;
@@ -196,6 +195,11 @@ html, body {
   .caret {
     display: none;
   }
+
+  /* center text of navbar selections on mobile */
+  #bs-example-navbar-collapse-1 {
+    text-align: center;
+  }
 } /* ends media queries for mobile */
 
 /* media queries for tablet sized mobile, 600px to 767px */
@@ -207,8 +211,14 @@ html, body {
 
   /* styles for nav subject selector and home link on tablets */
   a.dropdown-toggle {
+    font-size: 22px;
+    border-radius: 20px;
+    border: 1px solid #337ab7;
+  }
+
+  /* set font for dropdown menu items on tablets */
+  .dropdown-menu {
     font-size: 18px;
-    margin-left: 10px;
   }
 
   /* styles for submit question/answer button on tablets */
@@ -241,7 +251,7 @@ html, body {
     margin-top: 20px;
   }
 
-  /* set button padding on mobile  */
+  /* set button padding on tablets  */
   .submit {
     padding: 0;
   }
@@ -250,14 +260,18 @@ html, body {
   .caret {
     display: none;
   }
+
+  /* center text of navbar selections on tablets */
+  #bs-example-navbar-collapse-1 {
+    text-align: center;
+  }
 } /* ends media queires for tablets */
 
 /* media queries for desktops, anything 768px and larger */
 @media only screen and (min-width: 768px) {
   /* styles for nav subject selector and home link */
   a.dropdown-toggle {
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 22px;
   }
 
   /* page_title styles */
@@ -292,14 +306,11 @@ html, body {
   }
 
   /* styles for question and answer generator buttons */
-  #question_button {
-    width: 30%;
-    height: 32px;
-  }
-
+  #question_button,
   #answer_button {
     width: 30%;
     height: 32px;
+    font-size: 16px;
   }
 
   /* set font size on desktop */
@@ -308,7 +319,7 @@ html, body {
     margin-top: 20px;
   }
 
-  /* set button padding on mobile  */
+  /* set button padding on desktop  */
   .submit {
     padding: 0;
   }
