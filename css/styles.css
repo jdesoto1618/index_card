@@ -18,18 +18,19 @@ html, body {
   box-sizing: inherit;
 }
 
-/* set navbar styles */
+/* remove rounded navbar edges */
 .navbar {
   border-radius: 0;
 }
 
+/* give the navbar buttons some space between each one */
 .navbar-nav {
   margin: 7.5px 0;
 }
 
-/* adjust bootstrap navbar margin */
+/* adjust bootstrap right navbar margin for div holding ul's */
 #bs-example-navbar-collapse-1 {
-  margin: 0;
+  margin: 0 10px 0 0;
 }
 
 /* adjust boostrap container-fluid class padding for navbar */
@@ -127,8 +128,8 @@ html, body {
     border: 1px solid #337ab7;
   }
 
-  /* reduce padding for navbar buttons on very small mobile */
-  li.dropdown>a.dropdown-toggle {
+  /* reduce padding for navbar subject links on very small mobile */
+  li.dropdown > a.dropdown-toggle {
     padding: 5px 10px;
   }
 
@@ -141,11 +142,6 @@ html, body {
   /* set font for dropdown menu items on tablets */
   .dropdown-menu {
     font-size: 14px;
-  }
-
-  /* reset navbar margins on very small mobile */
-  .navbar-nav {
-    /* margin: 0; */
   }
 
   /* styles for submit question/answer button on very small mobile */
@@ -204,8 +200,8 @@ html, body {
     border: 1px solid #337ab7;
   }
 
-  /* reduce padding for navbar buttons on very small mobile */
-  li.dropdown>a.dropdown-toggle {
+  /* reduce padding for navbar buttons on mobile */
+  li.dropdown > a.dropdown-toggle {
     padding: 7.5px 10px;
   }
 
@@ -280,6 +276,17 @@ html, body {
   /* set font for dropdown menu items on tablets */
   .dropdown-menu {
     font-size: 18px;
+  }
+
+  /* reduce padding for navbar buttons on tablet */
+  li.dropdown > a.dropdown-toggle {
+    padding: 7.5px 10px;
+  }
+
+  /* reduce padding for the anchor links in navbar menus on mobile */
+  #topics > li > a,
+  #menu > li > a {
+    padding: 5px;
   }
 
   /* styles for submit question/answer button on tablets */
