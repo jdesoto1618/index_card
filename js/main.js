@@ -8,6 +8,13 @@ function card(obj) {
   return [rand_question, ans];
 } // ends card function
 
+// function to check the screen width
+function checkWidth() {
+  // save the screen width to a var
+  var width = document.body.clientWidth;
+  return width;
+} // ends checkWidth function
+
 // function to hide input values and buttons when switching topics
 function clearValues() {
   if(quest_field) {
@@ -24,6 +31,25 @@ function clearValues() {
     add_quest_ans.value = '';
   }
 }
+
+// get screen width. this returns an html collection, select the first occurrence with [0]
+document.getElementsByTagName('body')[0].onresize = function() {
+  // save clicked topic name to a variable. scoped for this function
+  var topic = document.getElementById('page_title').innerText;
+  // get screen width, save to width var
+  var width = checkWidth();
+  // update dom elements when screens are smaller than 316px wide
+  if(width < 316) {
+    sub_quest_button.innerHTML = 'Add Question to ' + '<br/>' + topic;
+    quest_button.innerHTML = 'Random' + '<br/>' + 'Question';
+    ans_button.innerHTML = 'View' + '<br/>' + 'Answer';
+  } else {
+    // update dom elements when screens are larger than 316px wide
+    sub_quest_button.innerHTML = 'Add Question to ' + topic;
+    quest_button.innerHTML = 'Random Question';
+    ans_button.innerHTML = 'View Answer';
+  }
+} // ends screen width function
 
 // save question button to a var
 var quest_button = document.getElementById('question_button');
@@ -45,12 +71,18 @@ ans_button.style.display = 'none';
 add_quest.style.visibility = 'hidden';
 add_quest_ans.style.visibility = 'hidden';
 sub_quest_button.style.visibility = 'hidden';
-// select the clicked menu dropdown, from the ul with the links
+// select the clicked menu dropdown from the ul with the links
 var menus = document.querySelector('#menu');
-// select the clicked subject dropdown and use it to change the page title. note, this querySelector grabs the id from the ul containing the links
+// select the clicked subject dropdown. this querySelector grabs the id from the ul containing the links
 var subjects = document.querySelector('#topics');
 // event listener to get the clicked subject name
 var select = subjects.addEventListener('click', function(e) {
+// save clicked topic name to a variable
+var topic = e.target.innerText;
+// show the question generator button now that a topic is picked in navbar
+quest_button.style.visibility = 'visible';
+// change the title of the page to include the selected topic
+document.getElementById('page_title').innerHTML = topic;
   // function to show buttons and fields when adding a question and answer
   function addVisibility() {
     add_quest.style.visibility = 'visible';
@@ -70,12 +102,6 @@ var select = subjects.addEventListener('click', function(e) {
     add_quest.value = '';
     add_quest_ans.value = '';
   } // ends add_question function
-  // save clicked topic name to a variable
-  var topic = e.target.innerText;
-  // show the question and answer buttons now that something is selected in navbar
-  quest_button.style.visibility = 'visible';
-  // change the title of the page to include the selected topic
-  document.getElementById('page_title').innerHTML = topic;
   if(topic === 'Water Treatment') {
     // event listener to get the clicked menu option for adding a question
     var menu = menus.addEventListener('click', function(e) {

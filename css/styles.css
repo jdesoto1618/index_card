@@ -23,6 +23,20 @@ html, body {
   border-radius: 0;
 }
 
+.navbar-nav {
+  margin: 7.5px 0;
+}
+
+/* adjust bootstrap navbar margin */
+#bs-example-navbar-collapse-1 {
+  margin: 0;
+}
+
+/* adjust boostrap container-fluid class padding for navbar */
+.container-fluid {
+  padding: 0 5px 0 10px;
+}
+
 /* center align text in main div */
 .main {
   text-align: center;
@@ -62,12 +76,20 @@ html, body {
 #add_question_field,
 #add_answer_field {
   display: block;
-  margin: 30px auto 10px auto;
   padding-left: 10px;
   border-radius: 20px;
   border: none;
   outline: none;
   height: 32px;
+}
+
+/* individual styles for question and answer inputs */
+#add_question_field {
+  margin: 50px auto 10px auto;
+}
+
+#add_answer_field {
+  margin: 10px auto 10px auto;
 }
 
 #question_button:focus,
@@ -79,6 +101,16 @@ html, body {
 /* adjust padding on navbar dropdown menu for all screen sizes */
 .dropdown-menu {
   padding: 0;
+}
+
+/* move the hamburger menu to the left and adjust the default margins */
+.navbar-toggle {
+  float: left;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  margin-left: calc(5% + 1px);
+  border-radius: 6px;
 }
 
 /* media queries for very small mobile, up to 385px */
@@ -95,9 +127,25 @@ html, body {
     border: 1px solid #337ab7;
   }
 
+  /* reduce padding for navbar buttons on very small mobile */
+  li.dropdown>a.dropdown-toggle {
+    padding: 5px 10px;
+  }
+
+  /* reduce padding for the anchor links in navbar menus on very small mobile */
+  #topics > li > a,
+  #menu > li > a {
+    padding: 5px;
+  }
+
   /* set font for dropdown menu items on tablets */
   .dropdown-menu {
     font-size: 14px;
+  }
+
+  /* reset navbar margins on very small mobile */
+  .navbar-nav {
+    /* margin: 0; */
   }
 
   /* styles for submit question/answer button on very small mobile */
@@ -156,6 +204,17 @@ html, body {
     border: 1px solid #337ab7;
   }
 
+  /* reduce padding for navbar buttons on very small mobile */
+  li.dropdown>a.dropdown-toggle {
+    padding: 7.5px 10px;
+  }
+
+  /* reduce padding for the anchor links in navbar menus on mobile */
+  #topics > li > a,
+  #menu > li > a {
+    padding: 5px;
+  }
+
   /* set font for dropdown menu items on tablets */
   .dropdown-menu {
     font-size: 16px;
@@ -164,12 +223,14 @@ html, body {
   /* styles for submit question/answer button on mobile */
   #submit_question {
     width: 80%;
+    font-size: 16px;
   }
 
   /* styles for question input on mobile */
   #add_question_field,
   #add_answer_field {
     width: 80%;
+    font-size: 16px;
   }
 
   /* styles for question and answer generator buttons on mobile */
@@ -224,25 +285,28 @@ html, body {
   /* styles for submit question/answer button on tablets */
   #submit_question {
     width: 70%;
+    font-size: 18px;
   }
 
   /* styles for question input on tablets */
   #add_question_field,
   #add_answer_field {
     width: 70%;
+    font-size: 18px;
+    padding: 18px 12px;
   }
 
   /* styles for question and answer generator buttons on tablets */
   #question_button {
-    width: 40%;
+    width: 35%;
     height: 32px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   #answer_button {
-    width: 30%;
+    width: 35%;
     height: 32px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   /* styles for qa fields div on tablets */
